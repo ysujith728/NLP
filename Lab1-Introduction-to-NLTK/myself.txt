@@ -1,0 +1,5 @@
+My name is Sujith.
+I enjoy building software projects.
+I like exploring new technologies.
+I spend my free time learning programming.
+My goal is to create useful applications.
