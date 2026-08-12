@@ -1,0 +1,8 @@
+nltk
+pandas
+numpy
+scikit-learn
+gensim
+hmmlearn
+sklearn-crfsuite
+jupyter

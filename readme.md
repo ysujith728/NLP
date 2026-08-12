@@ -30,6 +30,20 @@ NLP/
 │   └── TF-IDF/
 │       └── tf-idf.py                          # Math-based TF-IDF calculation from scratch
 │
+├── NLP-Lab-Essentials/                        # Essential NLP Laboratory Notebooks & Solutions
+│   ├── README.md                              # Subfolder README with detailed lab walkthroughs
+│   ├── requirements.txt                       # Package dependencies
+│   ├── 01_Preprocessing.ipynb                 # File reading, tokenization, stopword removal, stemming
+│   ├── 02_Word_Embeddings.ipynb               # Skip-Gram Word2Vec training and word similarities
+│   ├── 03_TFIDF_LSI.ipynb                     # Manual TF-IDF and Latent Semantic Indexing (SVD)
+│   ├── 04_Ngrams.ipynb                        # Manual & Scikit-learn N-gram generation
+│   ├── 05_HMM_POS_Tagging.ipynb               # POS tagging with HMM using hmmlearn CategoricalHMM
+│   ├── 06_HMM_Viterbi_From_Scratch.ipynb      # Step-by-step Viterbi algorithm from scratch
+│   ├── 07_CRF_POS_Tagging.ipynb               # Feature-based POS Tagging using CRF (sklearn-crfsuite)
+│   ├── NLP_Lab_Complete.ipynb                 # Compiled notebook with all experiments
+│   └── data/
+│       └── sample.txt                         # Input text corpus for Preprocessing
+│
 └── NLTK-Food-Text-Analysis/                   # Advanced Food Corpus Text Processing & Retrieval
     ├── mutton_biryani.txt                     # Text document describing Mutton Biryani
     ├── lab1.ipynb                             # Text preprocessing, stemming, and scikit-learn TF-IDF
@@ -112,25 +126,43 @@ Extends the food text analysis to document retrieval:
 
 ---
 
+### 3. Essential NLP Labs (`NLP-Lab-Essentials/`)
+
+This folder contains a set of fundamental NLP lab notebooks implementing core workflows from basic text processing to advanced sequence classification:
+
+*   **[01_Preprocessing.ipynb](file:///d:/5TH%20SEMESTER/NLP/NLP-Lab-Essentials/01_Preprocessing.ipynb)**: Implements text tokenization, casing normalization, punctuation removal, stopword filtering, and Porter stemming using `NLTK`. Reads from [sample.txt](file:///d:/5TH%20SEMESTER/NLP/NLP-Lab-Essentials/data/sample.txt).
+*   **[02_Word_Embeddings.ipynb](file:///d:/5TH%20SEMESTER/NLP/NLP-Lab-Essentials/02_Word_Embeddings.ipynb)**: Demonstrates training a Skip-gram model using Gensim's `Word2Vec`, vector queries, and cosine similarities on a vocabulary corpus.
+*   **[03_TFIDF_LSI.ipynb](file:///d:/5TH%20SEMESTER/NLP/NLP-Lab-Essentials/03_TFIDF_LSI.ipynb)**: Calculates TF, IDF, and TF-IDF from scratch using pandas and math libraries, and reduces dimensionality with Latent Semantic Indexing (LSI) via scikit-learn's `TruncatedSVD`.
+*   **[04_Ngrams.ipynb](file:///d:/5TH%20SEMESTER/NLP/NLP-Lab-Essentials/04_Ngrams.ipynb)**: Generates character/word n-grams (unigrams, bigrams, trigrams) manually with NLTK `ngrams` and automatically via scikit-learn's `CountVectorizer`.
+*   **[05_HMM_POS_Tagging.ipynb](file:///d:/5TH%20SEMESTER/NLP/NLP-Lab-Essentials/05_HMM_POS_Tagging.ipynb)**: Performs POS Tagging using a manually defined Hidden Markov Model (HMM) from the `hmmlearn` package.
+*   **[06_HMM_Viterbi_From_Scratch.ipynb](file:///d:/5TH%20SEMESTER/NLP/NLP-Lab-Essentials/06_HMM_Viterbi_From_Scratch.ipynb)**: Implements the Viterbi dynamic programming decoding algorithm from scratch for POS tagging sequence evaluation.
+*   **[07_CRF_POS_Tagging.ipynb](file:///d:/5TH%20SEMESTER/NLP/NLP-Lab-Essentials/07_CRF_POS_Tagging.ipynb)**: Employs Conditional Random Fields (CRFs) using `sklearn-crfsuite` with detailed word feature extraction rules.
+*   **[NLP_Lab_Complete.ipynb](file:///d:/5TH%20SEMESTER/NLP/NLP-Lab-Essentials/NLP_Lab_Complete.ipynb)**: Compilation of all these seven modules in a single Jupyter Notebook.
+
+---
+
 ## 🛠️ Technologies and Libraries
 
 - **Programming Language**: Python 3.10+
 - **Environments**: Jupyter Notebooks
 - **Key Libraries**:
   - `NLTK` (Tokenization, POS tagging, Stemming, WordNet, VADER sentiment, N-grams)
-  - `Scikit-learn` (TfidfVectorizer, PCA)
+  - `Scikit-learn` (TfidfVectorizer, PCA, TruncatedSVD)
   - `Pandas` (Matrix construction, CSV manipulation, tabular formatting)
   - `NumPy` (Vector and numeric computations)
   - `Matplotlib` (PCA scatter plotting)
+  - `Gensim` (Word2Vec word embeddings)
+  - `hmmlearn` (HMM-based sequence classification)
+  - `sklearn-crfsuite` (Conditional Random Fields model implementation)
 
 ---
 
 ## 🚀 How to Run the Scripts
 
 ### Prerequisites
-Make sure Python and the required libraries are installed:
+Make sure Python and the required libraries are installed. You can install all dependencies using the requirements file in the essentials folder:
 ```bash
-pip install nltk pandas scikit-learn matplotlib numpy
+pip install -r "NLP-Lab-Essentials/requirements.txt"
 ```
 
 ### Running N-grams and Scratch TF-IDF
@@ -141,4 +173,11 @@ python "Lab1-Introduction-to-NLTK/N grams/ngram.py"
 
 # To compute custom TF-IDF matrices
 python "Lab1-Introduction-to-NLTK/TF-IDF/tf-idf.py"
+```
+
+### Running the Essential Notebooks
+Start the Jupyter environment and open the notebooks in `NLP-Lab-Essentials/`:
+```bash
+# Start Jupyter
+jupyter notebook
 ```
